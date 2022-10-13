@@ -1,0 +1,348 @@
+* {
+    /* border: 1px solid red; */
+    font-family: roboto-light;
+    font-size: 18px;
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: roboto-medium;
+    src: url(./fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-thin;
+    src: url(./fonts/Roboto/Roboto-Thin.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: 1fr 7fr;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #0ea5e9;
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    color: white;
+    padding: 0px 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 10fr;
+    width: 250px;
+    gap: 50px;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.logo-header h1 {
+    font-family: roboto-medium;
+    font-size: 2rem;
+}
+
+.logo-header img {
+    margin: 10px;
+}
+
+.sidebar li {
+    padding: 8px;
+    display: block;
+}
+
+.sidebar img {
+    height: 42px;
+    width: 42px;
+    vertical-align: middle;
+}
+
+.sidebar span {
+    vertical-align: middle;
+    padding: 15px;
+    font-size: larger;
+    font-family: roboto-medium;
+    color: white;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Header Grid */
+
+.header-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px 40px 10px 40px;
+    box-shadow: 10px 10px 10px #eeeeee;
+    height: 150px;
+    justify-content: start; 
+    position: relative;
+}
+
+.top-left-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#search {
+    height: 30px;
+    width: 80%;
+    border: 2px solid #b1afaf;
+    border-radius: 10px;
+    justify-self: start;
+}
+
+.top-right-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    align-items: center;
+    justify-items: center;
+}
+
+.top-right-container .notifications {
+    height: 35px;
+    border-radius: 100px;
+    /* padding-left: 30px; */
+    fill: red;
+}
+
+.profile-picture.small {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.bottom-left-container {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 122px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.greeting {
+    grid-column: 2 / 3;
+}
+
+.greeting-name {
+    display: block;
+    font-family: roboto-medium;
+    font-size: 1.3rem;
+    align-self: start;
+}
+
+.greeting h3 {
+    font-family: roboto-light;
+    font-size: 1.2rem;
+    align-self: end;
+}
+
+.profile-picture.large {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    justify-self: center;
+}
+
+.bottom-right-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    display: grid;
+    gap: 25px;
+    padding-left: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.bottom-right-container li button {
+    background-color: #0ea5e9;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    height: 2rem;
+    width: 5rem;
+    box-shadow: 5px 5px 5px #eeeeee;
+    font-family: roboto-bold;
+}
+
+
+/* Main Area */
+
+
+.projects-title,
+.announcements-title,
+.trending-title {
+    font-size: 1.5rem;
+    font-family: roboto-bold;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.main-area {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    padding: 20px 40px;
+    background-color:#f2f5f5;
+    gap: 15px;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.project-card {
+    border: 2px solid black;
+    width: 400px;
+    height: 262px;
+    padding-left: 20px;
+    background-color: white;
+    border: none;
+    border-left: 8px solid rgb(251, 201, 0);
+    border-radius: 5px;
+    position: relative;
+}
+
+.project-card p:first-child {
+    font-family: roboto-bold;
+}
+
+.card-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.card-buttons img {
+    height: 30px;
+    margin: 5px;    
+}
+
+/* Announcements */
+
+
+.announcement-container {
+    width: 60%;
+    padding: 5px 20px;
+    background-color: white;
+    border: none;
+    border-left: 8px solid rgb(251, 201, 0);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.announcement-1,
+.announcement-2 {
+    border-bottom: 1.5px solid rgb(212, 211, 211);
+}
+
+.announcement-container div p {
+    font-size: 1rem;
+}
+
+.announcement-container div :first-child {
+    font-size: 1rem;
+    font-family: roboto-bold;
+}
+
+/* Trending */
+
+.trending-container {
+    border: 2px solid black;
+    width: 15vw;
+    padding: 5px 20px;
+    background-color: white;
+    border: none;
+    border-left: 8px solid rgb(251, 201, 0);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.trending-container > div {
+    border-bottom: 1.5px solid rgb(212, 211, 211);
+}
+
+.trending-container :last-child {
+    border-bottom: none;
+}
+
+.trending-user-name {
+    font-family: roboto-medium;
+    padding: 1px;
+}
+
+.trending-container img {
+    height: 60px;
+    border-radius: 30px;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+}
+
+.trending img {
+    grid-row: 1 / span 2;
+}
+
+.trending-user-tag {
+    align-self: end;
+}
